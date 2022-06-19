@@ -9,12 +9,8 @@ public class LoopFor {
         }
     System.out.println("Индекс после цикла равен: " + i);
     System.out.println("Условие выполнения цикла равно: " + result);
-       int a;
-       boolean rsl;
-       for (a = 5; rsl = a <= 10; a++) {
+       for (int a = 5; a <= 10; a++) {
            System.out.println(a);
        }
-    System.out.println("Индекс после цикла равен: " + a);
-    System.out.println("Условие выполнения цикла равно: " + rsl);
     }
 }
