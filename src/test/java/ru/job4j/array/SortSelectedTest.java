@@ -6,7 +6,7 @@ import org.junit.Assert;
 public class SortSelectedTest {
 
     @Test
-    public void whenSortArrayOf5elements() {
+    public void whenSortArrayOf5Elements() {
         int[] data = new int[] {3, 4, 1, 2, 5};
         int[] result = SortSelected.sort(data);
         int[] expected = new int[] {1, 2, 3, 4, 5};
@@ -14,7 +14,7 @@ public class SortSelectedTest {
     }
 
     @Test
-    public void whenSortArrayOf3elements() {
+    public void whenSortArrayOf3Elements() {
         int[] data = new int[] {3, 4, 1};
         int[] result = SortSelected.sort(data);
         int[] expected = new int[] {1, 3, 4};
