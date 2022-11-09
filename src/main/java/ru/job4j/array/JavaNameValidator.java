@@ -4,14 +4,15 @@ import java.lang.Character;
 
 public class JavaNameValidator {
     public static boolean isNameValid(String name) {
-        boolean valid = false;
-        for (int i = 0; i < name.length(); i++) {
-            int rsl = name.codePointAt(i);
-            if (name.isEmpty() || Character.isDigit(name.codePointAt(0)) || Character.isUpperCase(name.codePointAt(0))) {
-                break;
-            }
-            if (isLowerLatinLetter(rsl) || isSpecialSymbol(rsl) || isUpperLatinLetter(rsl)) {
-                valid = true;
+        boolean valid = true;
+        if (name.isEmpty() || Character.isDigit(name.codePointAt(0)) || Character.isUpperCase(name.codePointAt(0))) {
+            valid = false;
+        } else {
+            for (int i = 1; i < name.length(); i++) {
+                int rsl = name.codePointAt(i);
+                if (!(isLowerLatinLetter(rsl) || isSpecialSymbol(rsl) || isUpperLatinLetter(rsl))) {
+                    valid = false;
+                }
             }
         }
         return valid;
