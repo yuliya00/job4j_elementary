@@ -10,9 +10,10 @@ public class JavaNameValidator {
         } else {
             for (int i = 1; i < name.length(); i++) {
                 int rsl = name.codePointAt(i);
-                if (!(isLowerLatinLetter(rsl) || isSpecialSymbol(rsl) || isUpperLatinLetter(rsl))) {
+                if (!(isLowerLatinLetter(rsl) || isSpecialSymbol(rsl) || isUpperLatinLetter(rsl)) || Character.isDigit(rsl)) {
                     valid = false;
                 }
+                break;
             }
         }
         return valid;
